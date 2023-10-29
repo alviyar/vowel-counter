@@ -4,13 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vowel Counter</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <h1>Vowel Counter</h1>
 
     <input id="vowel-input" type="text">
     <button id="submit-btn">submit</button>
-    <p id="output-el"></p>
+   <p id="output-el">
+        Number of vowels: <span id="output-el">0</span>
+    </p>
 </body>
 
 <script>
@@ -20,7 +27,7 @@
     const submitBtn=document.getElementById("submit-btn")
     const outputEl=document.getElementById("output-el")
 
-    submitBtn.addEventListener("click",() => {
+    vowelinput.addEventListener("input",()=>{
         const input=vowelinput.value
         let count=0
         for(char of input){
@@ -33,5 +40,6 @@
         outputEl.textContent="Number of vowels: "+count
         
     })
+    outputelement.textContent=count
 </script>
 </html>
